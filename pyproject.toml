@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aerocat"
+version = "0.1.0"
+description = "Reproduction package for an empirical study of out-of-distribution safety in PPO-LSTM quadrotor reinforcement learning."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+  "jax[cuda12]>=0.6.0",
+  "flax>=0.10.0",
+  "optax>=0.2.4",
+  "orbax-checkpoint>=0.11.0",
+  "jaxtyping>=0.2.28",
+  "numpy>=1.26.0",
+  "scipy>=1.11.0",
+  "matplotlib>=3.8.0",
+  "tqdm>=4.66.0",
+  "pyyaml>=6.0.1",
+]
+
+[project.urls]
+"Source"     = "https://github.com/Heisenbear-Rebirth/aerocat"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+aerocat = ["**/*.yaml", "**/*.json"]

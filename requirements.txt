@@ -1,0 +1,19 @@
+# Core JAX ecosystem
+# JAX >= 0.6.0 is required for NVIDIA RTX 50-series (Blackwell, sm_120).
+# Earlier JAX wheels do not include sm_120 PTX.
+jax[cuda12]>=0.6.0
+flax>=0.10.0
+optax>=0.2.4
+orbax-checkpoint>=0.11.0
+jaxtyping>=0.2.28
+
+# Numerical / IO
+numpy>=1.26.0
+scipy>=1.11.0
+
+# Plotting (analysis only)
+matplotlib>=3.8.0
+
+# Utility
+tqdm>=4.66.0
+pyyaml>=6.0.1

@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# JAX / training artifacts (regenerated)
+.jax_cache/
+checkpoints/
+ablation_*/
+*/seed_*/
+metrics.json
+
+# Trajectory dumps (regenerated, can be GB-scale)
+T1_calib_trajectories/
+T1_trajectories/
+*.npz
+
+# Large result JSONs (regenerated)
+_dr_eval_results.json
+
+# Logs
+_logs/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Local-only experiment runtime
+experiments_runtime/
