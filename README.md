@@ -6,7 +6,7 @@ This repository contains the JAX/Flax implementation of a multi-task quadrotor
 reinforcement-learning environment, training pipeline (PPO + recurrent
 actor-critic with LSTM and an optional physics-structured critic, PSC), and a
 complete suite of evaluation and analysis scripts used to produce the 15
-diagnostic experiments documented in [`docs/COMPLETE_DELIVERABLE.md`](docs/COMPLETE_DELIVERABLE.md).
+diagnostic experiments summarised in the table below.
 
 The accompanying paper investigates **which factors actually drive
 out-of-distribution (OOD) safety in quadrotor RL** under randomised mass,
@@ -65,9 +65,6 @@ aerocat/
 │   └── launchers/                 ← bash launchers for long sweeps
 └── results/                       ← committed markdown tables + figures
                                      from the 14 reported diagnostics
-└── docs/
-    └── COMPLETE_DELIVERABLE.md    ← canonical single-source experimental log
-                                     (numbers, paths, contrasts, t-stats)
 ```
 
 `src/aerocat/` is a clean Python package; nothing in `experiments/` is imported
@@ -245,7 +242,7 @@ detach patterns (`setsid nohup ...`); adapt to your job scheduler as needed.
 | H9 | Can V_phys serve as a deployment-time crash predictor? | [`results/h9_vphys_predictor/h9_table.md`](results/h9_vphys_predictor/h9_table.md) — AUROC 0.80–0.83 at λ=1; modest |
 
 Full numerical detail (paired t-statistics, Cohen's d, all per-cell values) is
-in [`docs/COMPLETE_DELIVERABLE.md`](docs/COMPLETE_DELIVERABLE.md).
+contained in the per-diagnostic `*_table.md` files under [`results/`](results/).
 
 ---
 
